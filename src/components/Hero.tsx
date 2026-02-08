@@ -1,5 +1,15 @@
 import { useNavigate } from "react-router-dom";
-import { Sparkles, Mouse } from "lucide-react";
+import { Sparkles } from "lucide-react";
+
+// Stickers
+import stickerLily from "@/assets/sticker-lily.png";
+import stickerPlant from "@/assets/sticker-plant.png";
+import stickerDragon from "@/assets/sticker-dragon.png";
+import stickerBed from "@/assets/sticker-bed.png";
+import stickerTulips from "@/assets/sticker-tulips.png";
+import stickerDesk from "@/assets/sticker-desk.png";
+import stickerLaptop from "@/assets/sticker-laptop.png";
+import stickerNightstand from "@/assets/sticker-nightstand.png";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -16,42 +26,80 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-12 bg-background">
-      {/* White Door */}
-      <div className="relative mb-8">
-        <div className="w-48 h-80 md:w-56 md:h-96 bg-card rounded-t-full shadow-lg border border-border flex items-center justify-center">
-          <div className="w-3 h-3 rounded-full bg-dustyPink-deep absolute right-8 top-1/2" />
-        </div>
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-12 bg-background relative overflow-hidden">
+      {/* Floating Stickers */}
+      <img 
+        src={stickerLily} 
+        alt="" 
+        className="absolute top-20 left-8 w-24 md:w-32 opacity-90 -rotate-12 pointer-events-none"
+      />
+      <img 
+        src={stickerPlant} 
+        alt="" 
+        className="absolute top-16 right-8 w-28 md:w-40 opacity-90 rotate-6 pointer-events-none"
+      />
+      <img 
+        src={stickerDragon} 
+        alt="" 
+        className="absolute top-1/4 left-4 md:left-16 w-28 md:w-36 opacity-90 rotate-3 pointer-events-none"
+      />
+      <img 
+        src={stickerBed} 
+        alt="" 
+        className="absolute top-1/3 right-4 md:right-12 w-32 md:w-44 opacity-90 -rotate-6 pointer-events-none"
+      />
+      <img 
+        src={stickerTulips} 
+        alt="" 
+        className="absolute bottom-1/4 left-8 md:left-20 w-24 md:w-32 opacity-90 rotate-12 pointer-events-none"
+      />
+      <img 
+        src={stickerDesk} 
+        alt="" 
+        className="absolute bottom-32 right-8 md:right-16 w-28 md:w-36 opacity-90 -rotate-3 pointer-events-none"
+      />
+      <img 
+        src={stickerLaptop} 
+        alt="" 
+        className="absolute bottom-20 left-1/4 w-24 md:w-32 opacity-90 rotate-6 pointer-events-none"
+      />
+      <img 
+        src={stickerNightstand} 
+        alt="" 
+        className="absolute bottom-16 right-1/4 w-28 md:w-36 opacity-90 -rotate-12 pointer-events-none"
+      />
+
+      {/* Centered Content */}
+      <div className="relative z-10 flex flex-col items-center">
+        {/* Title */}
+        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl italic font-light text-primary mb-4 text-center">
+          Calm Like Her
+        </h1>
+        
+        <p className="font-body text-sm md:text-base text-muted-foreground text-center max-w-md mb-12">
+          a ritual toolkit for the overthinker learning to feel safe again
+        </p>
+
+        {/* Click to Begin Button */}
+        <button
+          onClick={handleBegin}
+          className="btn-navy flex items-center gap-2 mb-8"
+        >
+          <Sparkles className="w-4 h-4" />
+          <span>click to begin</span>
+        </button>
+
+        {/* Scroll Indicator */}
+        <button
+          onClick={handleScroll}
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+        >
+          <div className="w-6 h-10 rounded-full border-2 border-current flex items-start justify-center pt-2">
+            <div className="w-1 h-2 rounded-full bg-current animate-bounce" />
+          </div>
+          <span className="font-body text-xs">or scroll to learn more</span>
+        </button>
       </div>
-
-      {/* Title */}
-      <h1 className="font-display text-5xl md:text-7xl italic font-light text-primary mb-4 text-center">
-        Calm Like Her
-      </h1>
-      
-      <p className="font-body text-sm md:text-base text-muted-foreground text-center max-w-md mb-12">
-        a ritual toolkit for the overthinker learning to feel safe again
-      </p>
-
-      {/* Click to Begin Button */}
-      <button
-        onClick={handleBegin}
-        className="btn-navy flex items-center gap-2 mb-8"
-      >
-        <Sparkles className="w-4 h-4" />
-        <span>click to begin</span>
-      </button>
-
-      {/* Scroll Indicator */}
-      <button
-        onClick={handleScroll}
-        className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-current flex items-start justify-center pt-2">
-          <div className="w-1 h-2 rounded-full bg-current animate-bounce" />
-        </div>
-        <span className="font-body text-xs">or scroll to learn more</span>
-      </button>
     </section>
   );
 };
