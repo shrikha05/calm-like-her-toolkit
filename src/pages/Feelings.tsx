@@ -166,10 +166,6 @@ const Feelings = () => {
     }
   }, []);
 
-  if (!isUnlocked) {
-    return <EmailGate onUnlock={() => setIsUnlocked(true)} />;
-  }
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -209,6 +205,10 @@ const Feelings = () => {
           icon={selectedFeeling.icon}
           content={selectedFeeling.content}
         />
+      )}
+
+      {!isUnlocked && (
+        <EmailGate onUnlock={() => setIsUnlocked(true)} />
       )}
     </div>
   );

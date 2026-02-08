@@ -28,8 +28,8 @@ const EmailGate = ({ onUnlock }: EmailGateProps) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 bg-background">
-      <div className="max-w-md w-full text-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center px-6 bg-background/60 backdrop-blur-md">
+      <div className="max-w-md w-full text-center bg-card/90 backdrop-blur-sm rounded-3xl shadow-xl border border-border/50 p-8">
         <div className="w-16 h-16 rounded-full bg-dustyPink mx-auto mb-6 flex items-center justify-center">
           <Mail className="w-8 h-8 text-primary" />
         </div>
