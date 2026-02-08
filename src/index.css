@@ -161,4 +161,16 @@
   .section-padding {
     @apply py-16 md:py-24 px-6 md:px-12;
   }
+
+  /* Envelope-style card: peach with diagonal ribbed texture */
+  .envelope-card {
+    background-color: #e8d5c4;
+    background-image: repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 255, 255, 0.08) 3px,
+      rgba(255, 255, 255, 0.08) 6px
+    );
+  }
 }
