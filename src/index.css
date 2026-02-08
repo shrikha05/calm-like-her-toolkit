@@ -1,88 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Calm Like Her Design System
+   Colors: Light beige, powder dusty pink, navy blue
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Main palette */
+    --background: 30 30% 96%; /* Light warm beige */
+    --foreground: 220 40% 20%; /* Navy text */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 40% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 40% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 220 45% 25%; /* Navy blue */
+    --primary-foreground: 30 30% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 350 35% 88%; /* Powder dusty pink */
+    --secondary-foreground: 220 40% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 30 20% 92%;
+    --muted-foreground: 220 20% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 350 40% 85%; /* Dusty pink accent */
+    --accent-foreground: 220 40% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 220 45% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --beige: 30 30% 96%;
+    --beige-dark: 30 25% 90%;
+    --dusty-pink: 350 35% 88%;
+    --dusty-pink-deep: 350 40% 80%;
+    --navy: 220 45% 25%;
+    --navy-light: 220 40% 35%;
+    --cream: 40 40% 97%;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Typography */
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Inter', sans-serif;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 40% 12%;
+    --foreground: 30 30% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 40% 15%;
+    --card-foreground: 30 30% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 40% 15%;
+    --popover-foreground: 30 30% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 350 35% 85%;
+    --primary-foreground: 220 40% 15%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 30% 25%;
+    --secondary-foreground: 30 30% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 30% 20%;
+    --muted-foreground: 30 20% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 350 30% 35%;
+    --accent-foreground: 30 30% 96%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 220 30% 25%;
+    --input: 220 30% 25%;
+    --ring: 350 35% 85%;
+
+    --beige: 30 20% 15%;
+    --beige-dark: 30 15% 20%;
+    --dusty-pink: 350 25% 30%;
+    --dusty-pink-deep: 350 30% 40%;
+    --navy: 220 40% 70%;
+    --navy-light: 220 35% 60%;
+    --cream: 30 15% 12%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -101,5 +119,46 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-script {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .btn-navy {
+    @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-body text-sm tracking-wide transition-all duration-300;
+  }
+
+  .btn-navy:hover {
+    @apply opacity-90 transform scale-105;
+  }
+
+  .card-pink {
+    @apply bg-secondary rounded-2xl p-6 transition-all duration-300;
+  }
+
+  .card-pink:hover {
+    @apply shadow-lg transform -translate-y-1;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-6 md:px-12;
   }
 }
