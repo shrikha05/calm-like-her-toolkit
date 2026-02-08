@@ -26,47 +26,47 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-12 bg-background relative overflow-hidden">
-      {/* Floating Stickers – spread above, beside, and below the title */}
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-12 bg-background relative overflow-hidden">
+      {/* Floating Stickers – frame the title with clear spacing from browser chrome */}
       <img 
         src={stickerLily} 
         alt="" 
-        className="absolute top-10 left-[12%] md:left-[18%] w-24 md:w-32 lg:w-36 opacity-90 -rotate-12 pointer-events-none z-[1]"
+        className="absolute top-20 left-[22%] md:left-[28%] w-24 md:w-32 lg:w-36 opacity-90 -rotate-12 pointer-events-none z-[1]"
       />
       <img 
         src={stickerPlant} 
         alt="" 
-        className="absolute top-12 right-[12%] md:right-[18%] w-28 md:w-40 lg:w-44 opacity-90 rotate-6 pointer-events-none z-[1]"
+        className="absolute top-24 right-[16%] md:right-[22%] w-24 md:w-36 lg:w-40 opacity-90 rotate-6 pointer-events-none z-[1]"
       />
       <img 
         src={stickerDragon} 
         alt="" 
-        className="absolute top-32 left-4 md:left-12 w-28 md:w-36 lg:w-40 opacity-90 rotate-3 pointer-events-none z-[1]"
+        className="absolute top-36 left-6 md:left-14 w-32 md:w-40 lg:w-44 opacity-90 rotate-3 pointer-events-none z-[1]"
       />
       <img 
         src={stickerBed} 
         alt="" 
-        className="absolute top-20 right-4 md:right-10 w-32 md:w-44 lg:w-48 opacity-90 -rotate-6 pointer-events-none z-[1]"
+        className="absolute top-28 right-6 md:right-12 w-40 md:w-52 lg:w-56 opacity-90 -rotate-6 pointer-events-none z-[1]"
       />
       <img 
         src={stickerTulips} 
         alt="" 
-        className="absolute bottom-1/4 left-8 md:left-20 w-28 md:w-36 lg:w-40 opacity-90 rotate-12 pointer-events-none z-[1]"
+        className="absolute bottom-[28%] left-8 md:left-20 w-28 md:w-36 lg:w-40 opacity-90 rotate-12 pointer-events-none z-[1]"
       />
       <img 
         src={stickerDesk} 
         alt="" 
-        className="absolute bottom-32 right-8 md:right-16 w-32 md:w-40 lg:w-44 opacity-90 -rotate-3 pointer-events-none z-[1]"
+        className="absolute bottom-[26%] right-8 md:right-16 w-32 md:w-40 lg:w-44 opacity-90 -rotate-3 pointer-events-none z-[1]"
       />
       <img 
         src={stickerLaptop} 
         alt="" 
-        className="absolute bottom-20 left-1/4 w-28 md:w-36 lg:w-40 opacity-90 rotate-6 pointer-events-none z-[1]"
+        className="absolute bottom-20 left-[18%] md:left-[22%] w-28 md:w-36 lg:w-40 opacity-90 rotate-6 pointer-events-none z-[1]"
       />
       <img 
         src={stickerNightstand} 
         alt="" 
-        className="absolute bottom-16 right-1/4 w-32 md:w-40 lg:w-44 opacity-90 -rotate-12 pointer-events-none z-[1]"
+        className="absolute bottom-12 right-[18%] md:right-[22%] w-32 md:w-40 lg:w-44 opacity-90 -rotate-12 pointer-events-none z-[1]"
       />
 
       {/* Centered Content */}
