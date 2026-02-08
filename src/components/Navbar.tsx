@@ -21,12 +21,12 @@ const Navbar = () => {
           >
             science behind her
           </Link>
-          <a 
-            href="mailto:hello@mindlikehers.com" 
+          <Link 
+            to="/contact" 
             className="font-body text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             contact
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
