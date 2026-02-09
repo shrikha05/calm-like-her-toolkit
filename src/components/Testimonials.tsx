@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Mail, ChevronRight } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const testimonials = [
   {
@@ -16,99 +15,57 @@ const testimonials = [
   },
 ];
 
+const getInitial = (author: string) => {
+  const first = author.trim().split(/\s+/)[0];
+  return first ? first[0].toUpperCase() : "?";
+};
+
 const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const item = testimonials[currentIndex];
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
   return (
-    <section className="py-12 md:py-16 px-4 md:px-12 bg-dustyPink">
-      <div className="max-w-xl mx-auto text-center">
-        {/* Header */}
-        <div className="flex items-center justify-center gap-2 mb-8">
-          <Mail className="w-5 h-5 text-primary" />
-          <h2 className="font-display text-2xl italic text-primary">
-            letters from the community
+    <section
+      id="testimonials"
+      className="pt-8 sm:pt-10 pb-8 md:pt-12 md:pb-12 px-3 sm:px-6 md:px-12 bg-dustyPink"
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Headline */}
+        <div className="flex items-center justify-center gap-2 mb-8 sm:mb-10">
+          <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary shrink-0" />
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold text-primary text-center not-italic">
+            Women all around the world are saying
           </h2>
         </div>
 
-        {/* Envelope with letter */}
-        <div className="relative mx-auto w-full max-w-md">
-          {/* Letter/Quote card - positioned to peek out of envelope */}
-          <div className="relative z-20 bg-cream rounded-lg px-6 py-6 mx-6 shadow-md border border-border/30 -mb-6">
-            <p className="font-body text-base md:text-lg text-foreground leading-relaxed mb-3 italic">
-              "{item.quote}"
-            </p>
-            <p className="font-body text-sm text-muted-foreground">
-              — {item.author}
-            </p>
-          </div>
-
-          {/* Envelope */}
-          <div className="relative">
-            {/* Envelope flap (top triangle) */}
-            <svg 
-              viewBox="0 0 400 80" 
-              className="w-full h-auto relative z-10"
-              preserveAspectRatio="none"
+        {/* Horizontal testimonial cards */}
+        <div className="flex gap-4 sm:gap-5 md:gap-6 overflow-x-auto pb-2 -mx-1 px-1 snap-x snap-mandatory">
+          {testimonials.map((item, i) => (
+            <article
+              key={i}
+              className="flex-shrink-0 w-[min(100%,320px)] sm:w-[340px] bg-white rounded-xl shadow-md border border-white/80 p-5 sm:p-6 flex flex-col snap-start"
             >
-              <polygon 
-                points="0,80 200,10 400,80" 
-                fill="hsl(var(--primary))"
-                className="drop-shadow-sm"
-              />
-              {/* Flap inner shadow line */}
-              <line 
-                x1="10" y1="78" x2="200" y2="15" 
-                stroke="hsl(var(--primary-foreground))" 
-                strokeOpacity="0.15" 
-                strokeWidth="1"
-              />
-              <line 
-                x1="390" y1="78" x2="200" y2="15" 
-                stroke="hsl(var(--primary-foreground))" 
-                strokeOpacity="0.15" 
-                strokeWidth="1"
-              />
-            </svg>
-            
-            {/* Envelope body */}
-            <div className="bg-[hsl(var(--primary))] h-20 rounded-b-xl -mt-1 shadow-lg relative z-0">
-              {/* Subtle inner fold lines */}
-              <svg 
-                viewBox="0 0 400 80" 
-                className="absolute inset-0 w-full h-full"
-                preserveAspectRatio="none"
-              >
-                <line 
-                  x1="0" y1="0" x2="200" y2="60" 
-                  stroke="hsl(var(--primary-foreground))" 
-                  strokeOpacity="0.1" 
-                  strokeWidth="1"
-                />
-                <line 
-                  x1="400" y1="0" x2="200" y2="60" 
-                  stroke="hsl(var(--primary-foreground))" 
-                  strokeOpacity="0.1" 
-                  strokeWidth="1"
-                />
-              </svg>
-            </div>
-          </div>
+              {/* Avatar + name */}
+              <div className="flex items-center gap-3 mb-4">
+                <div
+                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-primary font-body font-semibold text-lg sm:text-xl shrink-0"
+                  style={{ backgroundColor: "hsl(350 35% 92%)" }}
+                >
+                  {getInitial(item.author)}
+                </div>
+                <div className="min-w-0">
+                  <p className="font-body font-semibold text-foreground text-sm sm:text-base truncate">
+                    {item.author}
+                  </p>
+                  <p className="font-body text-xs sm:text-sm text-muted-foreground">
+                    from our community
+                  </p>
+                </div>
+              </div>
+              {/* Quote */}
+              <p className="font-body text-sm sm:text-base text-foreground leading-relaxed flex-1">
+                — {item.quote}
+              </p>
+            </article>
+          ))}
         </div>
-
-        {/* Next button */}
-        <button
-          type="button"
-          onClick={goToNext}
-          className="btn-navy flex items-center gap-2 rounded-full px-8 py-3 mx-auto mt-8"
-        >
-          <span>next</span>
-          <ChevronRight className="w-4 h-4" />
-        </button>
       </div>
     </section>
   );

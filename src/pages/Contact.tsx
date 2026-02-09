@@ -34,16 +34,16 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <main className="pt-24 pb-16 px-6">
+      <main className="pt-20 sm:pt-24 pb-16 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
-          <h1 className="font-display text-3xl md:text-4xl text-primary mb-2 text-center">
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl text-primary mb-2 text-center">
             let's connect
           </h1>
-          <p className="font-body text-muted-foreground text-center mb-10">
+          <p className="font-body text-muted-foreground text-center mb-8 sm:mb-10 text-sm sm:text-base">
             we'd love to hear from you. reach out on any platform.
           </p>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {contactCards.map((card) => {
               const Icon = card.icon;
               return (
@@ -52,7 +52,7 @@ const Contact = () => {
                   href={card.href}
                   target={card.href.startsWith("http") ? "_blank" : undefined}
                   rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className={`flex items-center gap-4 p-5 rounded-xl border border-border ${card.bgClass} hover:opacity-90 transition-opacity group`}
+                  className={`flex items-center gap-4 p-4 sm:p-5 rounded-xl border border-border ${card.bgClass} hover:opacity-90 active:opacity-90 transition-opacity group min-h-[56px] touch-manipulation`}
                 >
                   <div className={`shrink-0 ${card.iconClass}`}>
                     <Icon className="w-8 h-8" />

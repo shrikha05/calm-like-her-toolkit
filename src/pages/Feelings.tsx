@@ -170,18 +170,18 @@ const Feelings = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      <main className="pt-24 pb-16 px-6">
+      <main className="pt-20 sm:pt-24 pb-16 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="font-display text-4xl md:text-5xl text-primary mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-primary mb-3 sm:mb-4">
               what are you feeling today, love?
             </h1>
-            <p className="font-body text-muted-foreground">
+            <p className="font-body text-muted-foreground text-sm sm:text-base">
               pick what resonates with you the most, we'll meet you there.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {feelings.map((feeling) => (
               <FeelingCard
                 key={feeling.id}

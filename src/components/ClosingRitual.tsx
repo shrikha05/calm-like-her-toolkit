@@ -2,7 +2,7 @@ const ClosingRitual = () => {
   return (
     <section className="section-padding bg-background">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="font-display text-3xl md:text-4xl text-primary mb-8">
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-primary mb-6 sm:mb-8">
           closing ritual ⊹₊˚ꕤ˚₊⊹
         </h2>
 
@@ -16,7 +16,7 @@ const ClosingRitual = () => {
           </p>
         </div>
 
-        <div className="my-12 p-8 bg-dustyPink rounded-2xl">
+        <div className="my-8 sm:my-12 p-6 sm:p-8 bg-dustyPink rounded-2xl">
           <p className="font-display text-lg italic text-primary mb-4">
             say quietly (out loud or in your head):
           </p>

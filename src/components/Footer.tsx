@@ -35,20 +35,20 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Email Subscribe */}
-        <div className="max-w-md mx-auto mb-12">
+        {/* Email Subscribe – stacked on mobile for easier tapping */}
+        <div className="max-w-md mx-auto mb-12 px-1">
           {!subscribed ? (
-            <form onSubmit={handleSubscribe} className="flex gap-2">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 sm:gap-2">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your email for future rituals"
-                className="flex-1 px-4 py-3 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 font-body text-sm focus:outline-none focus:border-primary-foreground/40"
+                className="w-full flex-1 px-4 py-3 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 font-body text-sm focus:outline-none focus:border-primary-foreground/40 min-h-[48px]"
               />
               <button
                 type="submit"
-                className="px-6 py-3 rounded-full bg-dustyPink text-primary font-body text-sm hover:opacity-90 transition-opacity"
+                className="w-full sm:w-auto px-6 py-3 rounded-full bg-dustyPink text-primary font-body text-sm hover:opacity-90 transition-opacity min-h-[48px] touch-manipulation shrink-0"
               >
                 subscribe
               </button>

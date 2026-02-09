@@ -2,13 +2,16 @@ import bunniesCherry from "@/assets/bunnies-cherry.png";
 
 const WhySection = () => {
   return (
-    <section className="section-padding bg-background relative overflow-hidden pb-38 md:pb-46">
+    <section className="section-padding bg-background relative overflow-hidden pb-48 sm:pb-56 md:pb-64">
       <div className="max-w-3xl mx-auto text-left">
-        <h2 className="font-display text-3xl md:text-4xl text-primary mb-8">
+        <h2
+          className="font-display text-2xl sm:text-3xl md:text-4xl text-primary mb-6 sm:mb-8"
+          style={{ fontWeight: 700 }}
+        >
           why calm like her exists
         </h2>
         
-        <div className="space-y-6 font-body text-muted-foreground">
+        <div className="space-y-4 sm:space-y-6 font-body text-muted-foreground text-[15px] sm:text-base">
           <p className="leading-relaxed">
             before you scroll, pause for a moment.
           </p>
@@ -27,11 +30,11 @@ const WhySection = () => {
         </div>
       </div>
 
-      {/* Bunnies at bottom right, inset so they stay on page */}
+      {/* Bunnies at bottom right – smaller on phone */}
       <img
         src={bunniesCherry}
         alt=""
-        className="absolute bottom-0 right-8 md:right-12 lg:right-20 w-72 md:w-96 lg:w-[28rem] opacity-95 pointer-events-none"
+        className="absolute bottom-0 right-0 sm:right-4 md:right-12 lg:right-20 w-52 sm:w-72 md:w-96 lg:w-[28rem] max-w-[55%] opacity-95 pointer-events-none"
       />
     </section>
   );

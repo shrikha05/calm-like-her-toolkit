@@ -28,7 +28,7 @@ const FeelingDialog = ({
 }: FeelingDialogProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-lg bg-card border-border max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-lg w-[calc(100vw-2rem)] sm:w-full bg-card border-border max-h-[85vh] sm:max-h-[90vh] overflow-y-auto rounded-xl sm:rounded-lg p-4 sm:p-6">
         <DialogHeader>
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 rounded-full bg-dustyPink flex items-center justify-center">

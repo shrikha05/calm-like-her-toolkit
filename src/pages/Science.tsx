@@ -6,44 +6,44 @@ const Science = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      <main className="pt-24 pb-16 px-6">
+      <main className="pt-20 sm:pt-24 pb-16 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
-          <h1 className="font-display text-4xl md:text-5xl text-primary mb-4 text-center">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-primary mb-3 sm:mb-4 text-center">
             science behind her
           </h1>
-          <p className="font-body text-muted-foreground text-center mb-12">
+          <p className="font-body text-muted-foreground text-center mb-8 sm:mb-12 text-sm sm:text-base">
             for all the girlies that truly want to understand how the brain works.
           </p>
 
           {/* Glossary */}
-          <section className="mb-16">
-            <h2 className="font-display text-2xl text-primary mb-6">
+          <section className="mb-12 sm:mb-16">
+            <h2 className="font-display text-xl sm:text-2xl text-primary mb-4 sm:mb-6">
               glossary of terms °ᡣ𐭩 . ° .
             </h2>
             
-            <div className="space-y-6">
-              <div className="p-6 bg-card rounded-xl border border-border">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="p-4 sm:p-6 bg-card rounded-xl border border-border">
                 <h3 className="font-display text-lg text-primary mb-2">nervous system</h3>
                 <p className="font-body text-sm text-muted-foreground">
                   the body's communication network that controls how you respond to stress, safety, and everything in between. it's always scanning for danger—even when there isn't any.
                 </p>
               </div>
               
-              <div className="p-6 bg-card rounded-xl border border-border">
+              <div className="p-4 sm:p-6 bg-card rounded-xl border border-border">
                 <h3 className="font-display text-lg text-primary mb-2">emotional regulation</h3>
                 <p className="font-body text-sm text-muted-foreground">
                   your ability to manage and respond to emotional experiences. it's not about suppressing feelings—it's about not being overwhelmed by them.
                 </p>
               </div>
               
-              <div className="p-6 bg-card rounded-xl border border-border">
+              <div className="p-4 sm:p-6 bg-card rounded-xl border border-border">
                 <h3 className="font-display text-lg text-primary mb-2">window of tolerance</h3>
                 <p className="font-body text-sm text-muted-foreground">
                   the zone where you can experience emotions without shutting down or exploding. when you're in your window, you can think clearly and respond thoughtfully.
                 </p>
               </div>
               
-              <div className="p-6 bg-card rounded-xl border border-border">
+              <div className="p-4 sm:p-6 bg-card rounded-xl border border-border">
                 <h3 className="font-display text-lg text-primary mb-2">fight, flight, freeze, fawn</h3>
                 <p className="font-body text-sm text-muted-foreground">
                   your body's automatic responses to perceived threat. fight = anger/defend. flight = escape/avoid. freeze = shut down/numb. fawn = people-please/appease.
@@ -54,7 +54,7 @@ const Science = () => {
 
           {/* Why You Can't Snap Out */}
           <section>
-            <h2 className="font-display text-2xl text-primary mb-6">
+            <h2 className="font-display text-xl sm:text-2xl text-primary mb-4 sm:mb-6">
               why you can't just 'snap out of it'
             </h2>
             
