@@ -26,18 +26,18 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="pt-8 pb-6 md:pt-10 md:pb-8 px-3 md:px-12 bg-dustyPink min-h-[80vh] flex flex-col">
-      <div className="max-w-4xl mx-auto w-full flex flex-col flex-1">
-        {/* Header – stays in place */}
-        <div className="flex items-center justify-center gap-2 shrink-0 mb-2">
+    <section className="pt-4 pb-4 md:pt-6 md:pb-6 px-3 md:px-12 bg-dustyPink flex flex-col">
+      <div className="max-w-4xl mx-auto w-full flex flex-col">
+        {/* Header */}
+        <div className="flex items-center justify-center gap-2 shrink-0 mb-0">
           <Mail className="w-5 h-5 text-primary" />
           <h2 className="font-display text-2xl italic text-primary">
             letters from the community
           </h2>
         </div>
 
-        {/* Envelope only – moves up with negative margin */}
-        <div className="relative w-full max-w-3xl lg:max-w-4xl mx-auto -mt-6 md:-mt-10 min-h-[460px] md:min-h-[560px] lg:min-h-[640px]">
+        {/* Envelope */}
+        <div className="relative w-full max-w-3xl lg:max-w-4xl mx-auto -mt-4 md:-mt-6 min-h-[400px] md:min-h-[480px] lg:min-h-[540px]">
           <img
             src={envelopeCard}
             alt=""
@@ -67,7 +67,7 @@ const Testimonials = () => {
         </div>
 
         {/* Next button */}
-        <div className="flex justify-center mt-4 shrink-0">
+        <div className="flex justify-center mt-2 shrink-0">
           <button
             type="button"
             onClick={goToNext}
