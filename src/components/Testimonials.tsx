@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Mail, ChevronRight } from "lucide-react";
-import envelopeSimple from "@/assets/envelope-simple.png";
+import envelopeElegant from "@/assets/envelope-elegant.png";
 
 const testimonials = [
   {
@@ -39,7 +39,7 @@ const Testimonials = () => {
         {/* Envelope image */}
         <div className="relative mx-auto w-full max-w-md mb-4">
           <img
-            src={envelopeSimple}
+            src={envelopeElegant}
             alt="Envelope"
             className="w-full h-auto"
           />
