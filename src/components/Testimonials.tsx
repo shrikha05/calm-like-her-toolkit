@@ -26,7 +26,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="pt-4 pb-4 md:pt-6 md:pb-6 px-3 md:px-12 bg-dustyPink flex flex-col">
+    <section className="pt-2 pb-2 md:pt-4 md:pb-4 px-3 md:px-12 bg-dustyPink flex flex-col">
       <div className="max-w-4xl mx-auto w-full flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-center gap-2 shrink-0 mb-0">
@@ -37,11 +37,11 @@ const Testimonials = () => {
         </div>
 
         {/* Envelope */}
-        <div className="relative w-full max-w-3xl lg:max-w-4xl mx-auto -mt-4 md:-mt-6 min-h-[400px] md:min-h-[480px] lg:min-h-[540px]">
+        <div className="relative w-full max-w-3xl lg:max-w-4xl mx-auto -mt-2 md:-mt-3 aspect-[16/10] md:aspect-[16/9]">
           <img
             src={envelopeCard}
             alt=""
-            className="w-full h-full object-contain object-center pointer-events-none"
+            className="w-full h-full object-contain object-top pointer-events-none"
           />
           {/* Text fitted inside the white note on the envelope */}
           <div
@@ -67,7 +67,7 @@ const Testimonials = () => {
         </div>
 
         {/* Next button */}
-        <div className="flex justify-center mt-2 shrink-0">
+        <div className="flex justify-center -mt-1 md:-mt-2 shrink-0">
           <button
             type="button"
             onClick={goToNext}
