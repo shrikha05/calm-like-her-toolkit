@@ -38,8 +38,8 @@ const Testimonials = () => {
         {/* Envelope with letter */}
         <div className="relative mx-auto w-full max-w-md">
           {/* Letter/Quote card - positioned to peek out of envelope */}
-          <div className="relative z-10 bg-cream rounded-t-lg px-6 py-8 mx-4 shadow-sm border border-border/20">
-            <p className="font-body text-base md:text-lg text-foreground leading-relaxed mb-4 italic">
+          <div className="relative z-20 bg-cream rounded-lg px-6 py-6 mx-6 shadow-md border border-border/30 -mb-6">
+            <p className="font-body text-base md:text-lg text-foreground leading-relaxed mb-3 italic">
               "{item.quote}"
             </p>
             <p className="font-body text-sm text-muted-foreground">
@@ -47,26 +47,56 @@ const Testimonials = () => {
             </p>
           </div>
 
-          {/* Envelope body */}
-          <div className="relative -mt-4">
-            {/* Envelope back */}
-            <div className="bg-[hsl(var(--primary))] rounded-b-2xl rounded-t-sm h-24 shadow-md" />
+          {/* Envelope */}
+          <div className="relative">
+            {/* Envelope flap (top triangle) */}
+            <svg 
+              viewBox="0 0 400 80" 
+              className="w-full h-auto relative z-10"
+              preserveAspectRatio="none"
+            >
+              <polygon 
+                points="0,80 200,10 400,80" 
+                fill="hsl(var(--primary))"
+                className="drop-shadow-sm"
+              />
+              {/* Flap inner shadow line */}
+              <line 
+                x1="10" y1="78" x2="200" y2="15" 
+                stroke="hsl(var(--primary-foreground))" 
+                strokeOpacity="0.15" 
+                strokeWidth="1"
+              />
+              <line 
+                x1="390" y1="78" x2="200" y2="15" 
+                stroke="hsl(var(--primary-foreground))" 
+                strokeOpacity="0.15" 
+                strokeWidth="1"
+              />
+            </svg>
             
-            {/* Envelope flap (triangle) */}
-            <div 
-              className="absolute -top-8 left-0 right-0 mx-4"
-              style={{
-                height: 0,
-                borderLeft: '140px solid transparent',
-                borderRight: '140px solid transparent',
-                borderBottom: '32px solid hsl(var(--primary))',
-                margin: '0 auto',
-                maxWidth: 'calc(100% - 2rem)',
-              }}
-            />
-            
-            {/* Inner envelope shadow line */}
-            <div className="absolute top-0 left-4 right-4 h-px bg-primary-foreground/20" />
+            {/* Envelope body */}
+            <div className="bg-[hsl(var(--primary))] h-20 rounded-b-xl -mt-1 shadow-lg relative z-0">
+              {/* Subtle inner fold lines */}
+              <svg 
+                viewBox="0 0 400 80" 
+                className="absolute inset-0 w-full h-full"
+                preserveAspectRatio="none"
+              >
+                <line 
+                  x1="0" y1="0" x2="200" y2="60" 
+                  stroke="hsl(var(--primary-foreground))" 
+                  strokeOpacity="0.1" 
+                  strokeWidth="1"
+                />
+                <line 
+                  x1="400" y1="0" x2="200" y2="60" 
+                  stroke="hsl(var(--primary-foreground))" 
+                  strokeOpacity="0.1" 
+                  strokeWidth="1"
+                />
+              </svg>
+            </div>
           </div>
         </div>
 
